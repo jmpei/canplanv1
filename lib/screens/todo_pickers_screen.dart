@@ -73,7 +73,7 @@ class _TodoPickersScreenState extends State<TodoPickersScreen> {
               height: 150,
               child: ListView.separated(
                 itemCount: _times.length,
-                separatorBuilder: (_, __) => const Divider(
+                separatorBuilder: (_, _) => const Divider(
                   height: 0.5,
                   thickness: 0.5,
                   indent: 16,

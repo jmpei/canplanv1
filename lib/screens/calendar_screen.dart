@@ -80,7 +80,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ? _buildEmptyState()
                 : ListView.separated(
                     itemCount: instances.length,
-                    separatorBuilder: (_, __) => const Divider(
+                    separatorBuilder: (_, _) => const Divider(
                       height: 0.5,
                       indent: 76,
                       color: CustomColors.separator,

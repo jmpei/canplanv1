@@ -105,7 +105,7 @@ class _NewStepScreenState extends State<NewStepScreen> {
                   ),
                   trailing: Switch(
                     value: _recordAudio,
-                    activeColor: CustomColors.accentBlue,
+                    activeThumbColor: CustomColors.accentBlue,
                     onChanged: (value) =>
                         setState(() => _recordAudio = value),
                   ),
@@ -123,7 +123,7 @@ class _NewStepScreenState extends State<NewStepScreen> {
                   ),
                   trailing: Switch(
                     value: _playSound,
-                    activeColor: CustomColors.accentBlue,
+                    activeThumbColor: CustomColors.accentBlue,
                     onChanged: (value) => setState(() => _playSound = value),
                   ),
                 ),

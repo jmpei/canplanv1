@@ -19,8 +19,8 @@ class NewScheduleScreen extends StatefulWidget {
 
 class _NewScheduleScreenState extends State<NewScheduleScreen> {
   String? _taskName;
-  String _date = 'Today';
-  String _time = '9:00 AM';
+  final String _date = 'Today';
+  final String _time = '9:00 AM';
   RepeatInterval _repeat = RepeatInterval.none;
 
   @override
@@ -154,23 +154,25 @@ class _NewScheduleScreenState extends State<NewScheduleScreen> {
       backgroundColor: CustomColors.background,
       builder: (sheetContext) {
         return SafeArea(
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              for (final interval in RepeatInterval.values)
-                RadioListTile<RepeatInterval>(
-                  title: Text(interval.label),
-                  value: interval,
-                  groupValue: _repeat,
-                  activeColor: CustomColors.accentBlue,
-                  onChanged: (value) {
-                    if (value != null) {
-                      setState(() => _repeat = value);
-                    }
-                    Navigator.pop(sheetContext);
-                  },
-                ),
-            ],
+          child: RadioGroup<RepeatInterval>(
+            groupValue: _repeat,
+            onChanged: (value) {
+              if (value != null) {
+                setState(() => _repeat = value);
+              }
+              Navigator.pop(sheetContext);
+            },
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                for (final interval in RepeatInterval.values)
+                  RadioListTile<RepeatInterval>(
+                    title: Text(interval.label),
+                    value: interval,
+                    activeColor: CustomColors.accentBlue,
+                  ),
+              ],
+            ),
           ),
         );
       },

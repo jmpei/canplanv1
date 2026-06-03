@@ -295,7 +295,7 @@ class _FinishSheet extends StatelessWidget {
             'assets/images/goldStar.png',
             width: 96,
             height: 96,
-            errorBuilder: (_, __, ___) => const Icon(
+            errorBuilder: (_, _, _) => const Icon(
               Icons.star,
               size: 96,
               color: CustomColors.homeGold,
@@ -306,7 +306,7 @@ class _FinishSheet extends StatelessWidget {
             'assets/images/happyface.png',
             width: 72,
             height: 72,
-            errorBuilder: (_, __, ___) => const Icon(
+            errorBuilder: (_, _, _) => const Icon(
               Icons.sentiment_very_satisfied,
               size: 72,
               color: CustomColors.success,
