@@ -7,6 +7,20 @@ backend without touching the screens.
 
 Design spec: `docs/superpowers/specs/2026-06-02-canplan-flutter-ui-skeleton-design.md`
 
+## Live demo
+
+Every push to `main` builds the Flutter web app and publishes it to GitHub Pages
+via `.github/workflows/deploy.yml`. Once enabled, the demo is live at:
+
+```
+https://<your-github-username>.github.io/<repo-name>/
+```
+
+**One-time setup** (after the first push): repo **Settings → Pages →
+Build and deployment → Source → "GitHub Actions"**. The next push (or a manual
+run from the Actions tab) deploys it; the URL also appears under the repo's
+**Environments → github-pages**.
+
 ## Run it
 
 ```bash
